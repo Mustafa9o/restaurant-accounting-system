@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Accounting System</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2><i class="fas fa-utensils"></i> <span data-en="RestoAccounts" data-ar="نظام المحاسبة">RestoAccounts</span></h2>
+            </div>
+            <ul class="sidebar-menu">
+                <li><a href="#" class="active" data-section="dashboard">
+                    <i class="fas fa-tachometer-alt"></i> 
+                    <span data-en="Dashboard" data-ar="لوحة التحكم">Dashboard</span>
+                </a></li>
+                <li><a href="#" data-section="sales">
+                    <i class="fas fa-receipt"></i> 
+                    <span data-en="Sales" data-ar="المبيعات">Sales</span>
+                </a></li>
+                <li><a href="#" data-section="expenses">
+                    <i class="fas fa-money-bill-wave"></i> 
+                    <span data-en="Expenses" data-ar="المصروفات">Expenses</span>
+                </a></li>
+                <li><a href="#" data-section="inventory">
+                    <i class="fas fa-boxes"></i> 
+                    <span data-en="Inventory" data-ar="المخزون">Inventory</span>
+                </a></li>
+                <li><a href="#" data-section="payroll">
+                    <i class="fas fa-users"></i> 
+                    <span data-en="Payroll" data-ar="الرواتب">Payroll</span>
+                </a></li>
+                <li><a href="#" data-section="reports">
+                    <i class="fas fa-chart-line"></i> 
+                    <span data-en="Reports" data-ar="التقارير">Reports</span>
+                </a></li>
+                <li><a href="#" data-section="taxes">
+                    <i class="fas fa-calculator"></i> 
+                    <span data-en="Taxes" data-ar="الضرائب">Taxes</span>
+                </a></li>
+                <li><a href="#" data-section="settings">
+                    <i class="fas fa-cog"></i> 
+                    <span data-en="Settings" data-ar="الإعدادات">Settings</span>
+                </a></li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header -->
+            <div class="header">
+                <h1 id="pageTitle" data-en="Dashboard" data-ar="لوحة التحكم">Dashboard</h1>
+                <div class="header-actions">
+                    <!-- Language Switcher -->
+                    <div class="language-switcher">
+                        <button class="lang-btn active" data-lang="en">EN</button>
+                        <button class="lang-btn" data-lang="ar">AR</button>
+                    </div>
+                    
+                    <!-- User Actions -->
+                    <div class="user-actions">
+                        <button class="btn btn-outline" id="loginBtn">
+                            <i class="fas fa-sign-in-alt"></i>
+                            <span data-en="Login" data-ar="تسجيل الدخول">Login</span>
+                        </button>
+                        <button class="btn" id="registerBtn">
+                            <i class="fas fa-user-plus"></i>
+                            <span data-en="Register" data-ar="إنشاء حساب">Register</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dashboard Section -->
+            <section id="dashboard" class="content-section active">
+                <!-- Dashboard Cards -->
+                <div class="dashboard-cards">
+                    <div class="card">
+                        <div class="card-header">
+                            <span class="card-title" data-en="Total Revenue" data-ar="إجمالي الإيرادات">Total Revenue</span>
+                            <div class="card-icon" style="background: var(--success);">
+                                <i class="fas fa-dollar-sign"></i>
+                            </div>
+                        </div>
+                        <div class="card-value">$24,569</div>
+                        <div class="card-change positive">
+                            <i class="fas fa-arrow-up"></i> 
+                            <span data-en="12.5% from last month" data-ar="12.5% من الشهر الماضي">12.5% from last month</span>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <span class="card-title" data-en="Total Expenses" data-ar="إجمالي المصروفات">Total Expenses</span>
+                            <div class="card-icon" style="background: var(--accent);">
+                                <i class="fas fa-credit-card"></i>
+                            </div>
+                        </div>
+                        <div class="card-value">$18,234</div>
+                        <div class="card-change negative">
+                            <i class="fas fa-arrow-up"></i> 
+                            <span data-en="8.2% from last month" data-ar="8.2% من الشهر الماضي">8.2% from last month</span>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <span class="card-title" data-en="Net Profit" data-ar="صافي الربح">Net Profit</span>
+                            <div class="card-icon" style="background: var(--secondary);">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                        </div>
+                        <div class="card-value">$6,335</div>
+                        <div class="card-change positive">
+                            <i class="fas fa-arrow-up"></i> 
+                            <span data-en="23.1% from last month" data-ar="23.1% من الشهر الماضي">23.1% from last month</span>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <span class="card-title" data-en="Orders Today" data-ar="الطلبات اليوم">Orders Today</span>
+                            <div class="card-icon" style="background: var(--warning);">
+                                <i class="fas fa-shopping-cart"></i>
+                            </div>
+                        </div>
+                        <div class="card-value">142</div>
+                        <div class="card-change positive">
+                            <i class="fas fa-arrow-up"></i> 
+                            <span data-en="5.3% from yesterday" data-ar="5.3% من الأمس">5.3% from yesterday</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Charts -->
+                <div class="chart-container">
+                    <div class="chart-header">
+                        <h3 class="chart-title" data-en="Revenue Overview" data-ar="نظرة عامة على الإيرادات">Revenue Overview</h3>
+                        <select>
+                            <option data-en="Last 7 Days" data-ar="آخر 7 أيام">Last 7 Days</option>
+                            <option data-en="Last 30 Days" data-ar="آخر 30 يومًا">Last 30 Days</option>
+                            <option data-en="Last 90 Days" data-ar="آخر 90 يومًا">Last 90 Days</option>
+                        </select>
+                    </div>
+                    <canvas id="revenueChart" height="100"></canvas>
+                </div>
+
+                <div class="chart-container">
+                    <div class="chart-header">
+                        <h3 class="chart-title" data-en="Expense Categories" data-ar="فئات المصروفات">Expense Categories</h3>
+                    </div>
+                    <canvas id="expenseChart" height="100"></canvas>
+                </div>
+            </section>
+
+            <!-- Sales Section -->
+            <section id="sales" class="content-section">
+                <div class="table-container">
+                    <div class="table-header">
+                        <h3 class="table-title" data-en="Sales Orders" data-ar="طلبات المبيعات">Sales Orders</h3>
+                        <button class="btn" onclick="showAddSaleForm()">
+                            <i class="fas fa-plus"></i> 
+                            <span data-en="New Sale" data-ar="بيع جديد">New Sale</span>
+                        </button>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th data-en="Order ID" data-ar="رقم الطلب">Order ID</th>
+                                <th data-en="Date" data-ar="التاريخ">Date</th>
+                                <th data-en="Customer" data-ar="العميل">Customer</th>
+                                <th data-en="Items" data-ar="العناصر">Items</th>
+                                <th data-en="Total" data-ar="المجموع">Total</th>
+                                <th data-en="Status" data-ar="الحالة">Status</th>
+                                <th data-en="Actions" data-ar="الإجراءات">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>#1001</td>
+                                <td>2023-06-15</td>
+                                <td>John Smith</td>
+                                <td>5</td>
+                                <td>$125.50</td>
+                                <td><span class="status status-paid" data-en="Paid" data-ar="مدفوع">Paid</span></td>
+                                <td>
+                                    <button class="btn" style="padding: 5px 10px; font-size: 0.85rem;">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#1002</td>
+                                <td>2023-06-15</td>
+                                <td>Sarah Johnson</td>
+                                <td>3</td>
+                                <td>$87.25</td>
+                                <td><span class="status status-pending" data-en="Pending" data-ar="قيد الانتظار">Pending</span></td>
+                                <td>
+                                    <button class="btn" style="padding: 5px 10px; font-size: 0.85rem;">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#1003</td>
+                                <td>2023-06-14</td>
+                                <td>Mike Davis</td>
+                                <td>7</td>
+                                <td>$210.75</td>
+                                <td><span class="status status-overdue" data-en="Overdue" data-ar="متأخر">Overdue</span></td>
+                                <td>
+                                    <button class="btn" style="padding: 5px 10px; font-size: 0.85rem;">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Other sections would go here -->
+            <!-- For brevity, I'm only including the main sections -->
+        </main>
+    </div>
+
+    <!-- Login/Register Modal -->
+    <div class="modal" id="authModal">
+        <div class="modal-container">
+            <button class="modal-close" id="modalClose">&times;</button>
+            <div class="modal-header">
+                <h2 data-en="Welcome to RestoAccounts" data-ar="مرحبًا بك في نظام المحاسبة">Welcome to RestoAccounts</h2>
+                <p data-en="Please login or register to continue" data-ar="يرجى تسجيل الدخول أو إنشاء حساب للمتابعة">Please login or register to continue</p>
+            </div>
+            <div class="modal-tabs">
+                <button class="modal-tab active" data-tab="login" data-en="Login" data-ar="تسجيل الدخول">Login</button>
+                <button class="modal-tab" data-tab="register" data-en="Register" data-ar="إنشاء حساب">Register</button>
+            </div>
+            
+            <!-- Login Form -->
+            <form class="modal-form active" id="loginForm">
+                <div class="form-group">
+                    <label data-en="Email" data-ar="البريد الإلكتروني">Email</label>
+                    <input type="email" class="form-control" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label data-en="Password" data-ar="كلمة المرور">Password</label>
+                    <input type="password" class="form-control" placeholder="Enter your password" required>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-block" data-en="Login" data-ar="تسجيل الدخول">Login</button>
+                </div>
+                <div class="form-footer">
+                    <span data-en="Don't have an account?" data-ar="ليس لديك حساب؟">Don't have an account?</span>
+                    <a href="#" class="register-link" data-en="Register here" data-ar="سجل هنا">Register here</a>
+                </div>
+            </form>
+            
+            <!-- Register Form -->
+            <form class="modal-form" id="registerForm">
+                <div class="form-group">
+                    <label data-en="Full Name" data-ar="الاسم الكامل">Full Name</label>
+                    <input type="text" class="form-control" placeholder="Enter your full name" required>
+                </div>
+                <div class="form-group">
+                    <label data-en="Email" data-ar="البريد الإلكتروني">Email</label>
+                    <input type="email" class="form-control" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label data-en="Password" data-ar="كلمة المرور">Password</label>
+                    <input type="password" class="form-control" placeholder="Create a password" required>
+                </div>
+                <div class="form-group">
+                    <label data-en="Confirm Password" data-ar="تأكيد كلمة المرور">Confirm Password</label>
+                    <input type="password" class="form-control" placeholder="Confirm your password" required>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-block" data-en="Register" data-ar="إنشاء حساب">Register</button>
+                </div>
+                <div class="form-footer">
+                    <span data-en="Already have an account?" data-ar="لديك حساب بالفعل؟">Already have an account?</span>
+                    <a href="#" class="login-link" data-en="Login here" data-ar="سجل دخولك هنا">Login here</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
