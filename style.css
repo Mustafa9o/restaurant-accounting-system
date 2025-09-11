@@ -11,6 +11,11 @@
 #dashboard .chart-container canvas {
     max-height: 200px;
 }
+@media (max-width: 768px) {
+    #dashboard .chart-container {
+        height: 200px;
+    }
+}
 :root {
     --primary: #2c3e50;
     --secondary: #3498db;
