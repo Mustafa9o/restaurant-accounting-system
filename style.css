@@ -4,7 +4,13 @@
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-
+/* Dashboard Charts - Reduced Size */
+#dashboard .chart-container {
+    height: 250px;
+}
+#dashboard .chart-container canvas {
+    max-height: 200px;
+}
 :root {
     --primary: #2c3e50;
     --secondary: #3498db;
